@@ -1,0 +1,92 @@
+<?php session_start(); 
+if($_SESSION["userName"]!="admin")
+{
+	header('Location:logout.php');
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Search | Admin</title>
+<link rel="stylesheet" type="text/css" href="css/Base.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="Js/font-awesome.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<body>
+<table border="0" align="center" width="100%">
+  		<tr>
+		  <td colspan="7"><div class="topnav">
+			  <div class="topnav-right">
+			  <a href="Homepage.html">Home</a>
+			  <a href="mailto:contact@saycheese.com">Contact</a>
+			  <a href="#about">About</a>
+			  <a href="discover.php">Discover</a>
+			  <a href="myCart.php"><img src="Resources/Images/other/cart.png" height="25px"></a>
+			  <a href="myProfile.php"><img src="Resources/Images/other/user.png" height="25px"></a>
+			  </div></div></td>
+		</tr>
+  <tr>
+    <td colspan="8">
+		<table border="0"  align="center">
+      <tr>
+		  <td class="tdmiddle"><h2>Search</h2></td>
+          <div class="container">
+            <table border="0" width="800" align="center">
+<?php
+$searchQue = $_POST["txtSearch"];
+$pid='';
+
+$con = mysqli_connect("localhost","root","","saycheese_db");
+				
+				if(!$con)
+				{
+					die("Cannot connect to DB Server");
+				}
+				
+				$sql="SELECT * FROM `products`; ";
+				
+				$result = mysqli_query($con,$sql);
+				
+				if (mysqli_num_rows($result)>0)
+				{
+					while($row = mysqli_fetch_assoc($result))
+					{
+						$str = $row["title"];
+						$colors = explode(" ",$str);
+						foreach ($colors as $value)
+						{
+							$st=$value;
+							if($st==$searchQue){
+								echo "<tr>
+						<td rowspan='3' width='200'><a href='viewProduct.php?id=".$row["productID"]."'><img title='view image' src='".$row["imgPath"]."' class='cover' width='150' height='150' style='object-fit: cover;'></a></td>
+						
+						
+						<td><a href='viewProduct.php?id=".$row["productID"]."' style='text-decoration:none'>".$row["title"]."</a></td></tr>
+						
+						
+						<tr><td>".$row["description"]."</td></tr>
+						
+						<tr><td class='tdright'><a href='editUploads.php?id=".$row["productID"]."'><i title='edit' style='color:black'; class='fa-solid fa-pen-to-square'></i></a></td>
+						<td class='tdmiddle'><a href='deleteProduct.php?id=".$row["productID"]."'><i title='delete' class='fa-solid fa-trash' style='color:black';></i></a></td>
+						<tr><td colspan='8'><hr></td></tr>
+						</tr>";
+								
+							}
+						}
+					}
+				}
+							
+				  ?>
+				</table>
+          </div>
+          <div class="container" style="background-color:#f1f1f1"></div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+INSERT INTO `user` (`username`, `firstName`, `lastName`, `email`, `password`) VALUES ('admin', 'john', 'williams', 'admin@admin.com', '1234');
+
+
+======================================
+
+$firstName = $_POST["txtFirstName"];
+		$lastName = $_POST["txtLastName"];
+		$username = $_POST["txtuname"];
+		$email = $_POST["txtEmail"];
+		$password = $_POST["txtPassword"]
+
+==========================
+
+</td></tr><tr><td>
+
+<span class="formwarn" id="chkpass"><span>
+title=''
+style='text-decoration:none'
+============================
+
+<script src="Js/font-awesome.js" crossorigin="anonymous"></script>
+
+edit
+<i class='fa-solid fa-pen-to-square'></i>
+
+cross
+<i class='fa-solid fa-x'></i>
+
+trash
+<i class="fa-solid fa-trash"></i>
+
+function validatefname() {
+	var fname= document.getElementById("txtFirstName");
+	if (fname=="") || (fname==null){
+		
+		document.getElementById("demo").innerHTML = "I have changed!";
+		return false;
+	}else{
+		return true;
+	}
+	//if (fname<2) || (fname>16){
+//		
+//		document.getElementById("warnfname").innerHTML = "First name should be 2-15";
+//		return false;
+//	}else{
+//		return true;
+//	}
+}
+
+
+
+
+function validate() 
+	{
+		var fname = document.getElementById("txtFirstName").value;
+		var lenfname= fname.length;
+		if	((fname=="") || (fname==null)||(lenfname<2) || (lenfname>15)) 
+		{
+			document.getElementById("warnfname").innerHTML = "Please enter First Name";
+			return false;
+		}
+		else{
+			document.getElementById("warnfname").innerHTML = "";
+			return true;
+		}
+		
+		if	((lenfname<2) || (lenfname>15)) 
+		{
+			document.getElementById("warnfname2").innerHTML = "First Name should be 1-15";
+			return false;
+		}
+		else{
+			document.getElementById("warnfname2").innerHTML = "";
+			return true;
+		}
+	}
+
+pattern=".{2,20}" required title="Username should be 2-20 characters"
+
+
+function validate() 
+	{
+		var fname = document.getElementById("txtFirstName").value;
+		if	((fname=="") || (fname==null)) 
+		{
+			document.getElementById("warnfname").innerHTML = "Please enter First Name";
+			return false;
+		}
+		else if ((fname.innerHTML.length<2) || (fname.innerHTML.length>15)){
+			document.getElementById("warnfname").innerHTML = "First Name should be 1-15";
+			return false;
+		}
+		else{
+			document.getElementById("warnfname").innerHTML = "";
+			return true;
+		}
+		else{
+			document.getElementById("warnfname").innerHTML = "";
+			return true;
+		}
