@@ -1,5 +1,5 @@
 I am uploading all project files including test files I used. Will be even with comments.
-Will be with test uploads and sql inf0. (Admin and test user account details will be on end of this note)
+Will be with test uploads and sql info. (Admin and test user account details will be on end of this note)
 Used Font awesome Js for icons (Graphics Purpose)
 
 
