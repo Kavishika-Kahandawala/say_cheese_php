@@ -2,6 +2,8 @@ This is an e-commerce website targetted on selling images, made with php.
 
 Functions includes Add products, View products, Manage products, Add to wishlist, Manage wishlist, Add to cart, Manage cart, Proceed to payment from cart/ wishlist or directly, Login, Logout, Register, Credit card payment interface with validation, Save payment information to database, Generate payment receipt at the end of transaction, Print payment receipt or save to computer as a pdf file, search interface for products search, Admin account, Admin control ...
 
+This site is now hosted at https://saycheese-images.000webhostapp.com/
+
 I am uploading all project files including test files I used. Will be even with comments.
 Will be with test uploads and sql info. (Admin and test user account details will be on end of this note)
 Used Font awesome Js for icons (Graphics Purpose)
