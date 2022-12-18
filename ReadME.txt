@@ -46,11 +46,4 @@ test user account info,
 username: test
 password: 123456
 
--------------------
-
-Admin account info,
-
-username: admin
-password: 123456
-
 ====================================
