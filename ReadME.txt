@@ -5,7 +5,7 @@ Functions includes Add products, View products, Manage products, Add to wishlist
 This site is now hosted at https://saycheese-images.000webhostapp.com/
 
 I am uploading all project files including test files I used. Will be even with comments.
-Will be with test uploads and sql info. (Admin and test user account details will be on end of this note)
+Will be with test uploads and sql info. (test user account details will be on end of this note)
 Used Font awesome Js for icons (Graphics Purpose)
 
 
